@@ -74,7 +74,7 @@ Matrix::Matrix(Matrix&& other) {
 Matrix& Matrix::operator=(Matrix&& other) {
 	if (this != &other)
 	{
-		delete m_data;
+		destroy();
 		m_rows = other.m_rows;
 		m_cols = other.m_cols;
 		m_data = other.m_data;
